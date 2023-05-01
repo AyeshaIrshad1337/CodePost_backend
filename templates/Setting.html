@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="static/setting_style.css" rel="stylesheet" type="text/css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="sidebar-brand">
+      <img src="static/user.png" height="70px" width="70px">
+   <h5>welcome {{request.user}}</h5>
+    
+    </div>
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a href="/userpanel"><span class="bx bxs-dashboard"></span>
+            <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a href="/CodePost"><span class='bx bxs-user-account'></span>
+            <span>Code Post</span></a>
+        </li>
+        <li>
+          <a href="/Events"><span class="bx bx-news"></span>
+            <span>News and Events</span></a>
+        </li>
+
+        <li>
+          <a href="/Setting" class="active"><span class="bx bx-cog"></span>
+            <span>Settings</span></a>
+        </li>
+        <li>
+          <a href="/logout"><span class='bx bx-log-out'></span>
+            <span>Logout</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-content">
+    <header>
+      <h3>
+        <label for="">
+          <span class="bx bx-menu"></span>
+        </label>
+        Settings
+      </h3>
+      <div class="search-wrapper">
+        <span class="bx bx-search"></span>
+        <input type="search" placeholder="Search here" />
+      </div>
+    </header>
+
+    <div class="rightbox">
+      <div>
+        <h1>Personal Info</h1>
+        <h2>Full Name</h2>
+        <p>{{request.user}} <button class="btn">update</button></p>
+        <h2>Email</h2>
+        <p>{{request.user.email}}</p>
+        <h2>Password</h2>
+        <p>{{request.user}} <button class="btn">Change</button></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+</body>
+
+</html>
